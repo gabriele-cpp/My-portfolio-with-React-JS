@@ -1,0 +1,144 @@
+body, html {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-5px, 5px);
+  }
+  40% {
+    transform: translate(5px, -5px);
+  }
+  60% {
+    transform: translate(-5px, 5px);
+  }
+  80% {
+    transform: translate(5px, -5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes glitch-lines {
+  0% {
+    opacity: 0.1;
+    transform: translateX(-10px);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 0.1;
+    transform: translateX(-10px);
+  }
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  color: white;
+  font-family: "Arial", sans-serif;
+  transition: opacity 1s ease-out;
+}
+
+.loading-title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.loading-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+.glitch-active .loading-title {
+  animation: glitch 0.1s infinite alternate, glitch-lines 0.2s infinite alternate;
+}
+
+.glitch-active {
+  background: black;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Pastikan tetap hitam */
+  z-index: 1000; /* Tetap di atas */
+}
+
+
+.glitch {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch:hover::before {
+  left: -2px;
+  text-shadow: -2px 0 red;
+  animation: glitch-animation 0.3s infinite;
+}
+
+.glitch:hover::after {
+  left: 2px;
+  text-shadow: 2px 0 blue;
+  animation: glitch-animation 0.3s infinite;
+}
+
+@keyframes glitch-animation {
+  0% { clip: rect(20px, 9999px, 85px, 0); }
+  50% { clip: rect(10px, 9999px, 90px, 0); }
+  100% { clip: rect(30px, 9999px, 100px, 0); }
+}
+
+
+
+.footer-gradient {
+  position: relative;
+}
+
+.footer-gradient::before {
+  content: "";
+  position: absolute;
+  top: -100px; /* Sesuaikan agar transisi lebih smooth */
+  left: 0;
+  width: 100%;
+  height: 100px; /* Sesuaikan tinggi gradient */
+  background: linear-gradient(to bottom, transparent, #1a1e27);
+}
