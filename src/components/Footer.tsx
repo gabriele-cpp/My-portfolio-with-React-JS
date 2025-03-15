@@ -2,12 +2,7 @@ const Footer = () => {
     return (
         <footer className="relative bg-gray-800 text-white py-6 text-center">
             {/* Gradient & Blur Transition */}
-            <div className="absolute -top-12 left-0 w-full h-24 bg-gradient-to-t from-gray-800 via-black/50 to-transparent"></div>
-
-            {/* Copyright */}
-            <p className="text-gray-400 text-sm mt-2">
-                © {new Date().getFullYear()} Emil Gabriel. All rights reserved.
-            </p>
+            <div className="absolute -top-20 left-0 w-full h-24 bg-gradient-to-t from-gray-800 via-black/50 to-transparent"></div>
 
             {/* Built With Info */}
             <p className="text-gray-400 text-sm">

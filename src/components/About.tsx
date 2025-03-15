@@ -46,7 +46,7 @@ const About = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1.5, ease: "easeOut" }}
                     >
-                        I'm a <span className="text-blue-400 font-bold">I am a Amateur</span>,
+                        <span className="text-blue-400 font-bold">I am a Amateur</span>,
                         <span className="text-blue-400 font-bold"> UI/UX Designer</span> and <span className="text-blue-400 font-bold">Editor.</span> Always wanted to creating stunning digital experiences.
                     </motion.p>
 
