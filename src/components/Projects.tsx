@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
 const projects = [
-    { title: "Mount Bromo", video: "/videos/project1.mp4" },
-    { title: "A gabut day w me", video: "/videos/project2.mp4" },
-    { title: "Typography", video: "/videos/project3.mp4" },
+    { title: "Mount Bromo", video: "/videos/project1.webm" },
+    { title: "A gabut day w me", video: "/videos/project2.webm" },
+    { title: "Typography", video: "/videos/project3.webm" },
 ];
 
 const Projects = () => {
